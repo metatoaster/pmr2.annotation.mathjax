@@ -1,0 +1,4 @@
+<div tal:condition="exists:view/title" tal:replace="structure view/title"/>
+<div id="mathjax-view">
+<!-- TODO: math content goes here -->
+</div>

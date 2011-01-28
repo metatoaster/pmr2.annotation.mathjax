@@ -1,0 +1,26 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master">
+
+<metal:slot metal:fill-slot="javascript_head_slot" 
+    i18n:domain="pmr2.annotation.mathjax">
+
+  <script type="text/javascript"
+      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.mathjax.js/MathJax.js">
+  </script>
+
+</metal:slot>
+
+<body>
+
+<metal:slot metal:fill-slot="main" i18n:domain="cmf_default">
+  <div id="layout-contents">
+    <span tal:replace="structure view/contents" />
+  </div>
+</metal:slot>
+</body>
+
+</html>

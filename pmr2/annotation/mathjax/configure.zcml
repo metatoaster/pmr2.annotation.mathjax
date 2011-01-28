@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="pmr2">
+
+  <!-- Resources -->
+
+  <browser:resourceDirectory
+      name="pmr2.annotation.mathjax.js"
+      directory="js"
+      />
+
+  <!-- Note storage -->
+
+  <adapter
+      for="pmr2.app.exposure.interfaces.IExposureFile"
+      factory=".MathJaxNoteFactory"
+      provides="pmr2.annotation.mathjax.interfaces.IMathJaxNote"
+      name="mathjax"
+      />
+
+  <!-- Note Generation -->
+
+  <utility
+      name="mathjax"
+      component=".annotator.MathJaxAnnotatorFactory"
+      provides="pmr2.app.annotation.interfaces.IExposureFileAnnotator"
+      />
+
+  <!-- Browser pages -->
+
+  <adapter factory=".layout.mathjax_layout_factory" />
+
+  <browser:page
+      for="pmr2.app.exposure.interfaces.IExposureFile"
+      name="mathjax"
+      class=".browser.MathJaxNoteView"
+      permission="zope2.View"
+      />
+
+</configure>
