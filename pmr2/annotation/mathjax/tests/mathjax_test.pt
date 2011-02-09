@@ -1,0 +1,96 @@
+<div tal:condition="exists:view/title" tal:replace="structure view/title"/>
+<div id="mathjax-view">
+
+When <math><mi>a</mi><mo>&#x2260;</mo><mn>0</mn></math>,
+there are two solutions to <math>
+  <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+  <mo>+</mo> <mi>b</mi><mi>x</mi>
+  <mo>+</mo> <mi>c</mi> <mo>=</mo> <mn>0</mn>
+</math> and they are
+<math mode="display">
+  <mi>x</mi> <mo>=</mo>
+  <mrow>
+    <mfrac>
+      <mrow>
+        <mo>&#x2212;</mo>
+        <mi>b</mi>
+        <mo>&#x00B1;</mo>
+        <msqrt>
+          <msup><mi>b</mi><mn>2</mn></msup>
+          <mo>&#x2212;</mo>
+          <mn>4</mn><mi>a</mi><mi>c</mi>
+        </msqrt>
+      </mrow>
+      <mrow> <mn>2</mn><mi>a</mi> </mrow>
+    </mfrac>
+  </mrow>
+  <mtext>.</mtext>
+</math>
+
+<p><b>The Lorenz Equations</b></p>
+
+<p>
+\begin{align}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{align}
+</p>
+
+<p><b>The Cauchy-Schwarz Inequality</b></p>
+
+<p>\[
+\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
+ \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\]</p>
+
+<p><b>A Cross Product Formula</b></p>
+
+<p>\[
+  \mathbf{V}_1 \times \mathbf{V}_2 =
+   \begin{vmatrix}
+    \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+    \frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \\
+    \frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \\
+   \end{vmatrix}
+\]</p>
+
+<p><b>The probability of getting \(k\) heads when flipping \(n\) coins is:</b></p>
+
+<p>\[P(E) = {n \choose k} p^k (1-p)^{ n-k} \]</p>
+
+<p><b>An Identity of Ramanujan</b></p>
+
+<p>\[
+   \frac{1}{(\sqrt{\phi \sqrt{5}}-\phi) e^{\frac25 \pi}} =
+     1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+      {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+\]</p>
+
+<p><b>A Rogers-Ramanujan Identity</b></p>
+
+<p>\[
+  1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
+    \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},
+     \quad\quad \text{for $|q|&lt;1$}.
+\]</p>
+
+<p><b>Maxwell's Equations</b></p>
+
+<p>
+\begin{align}
+  \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+  \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
+  \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+  \nabla \cdot \vec{\mathbf{B}} &amp; = 0
+\end{align}
+</p>
+
+<p>Finally, while display equations look good for a page of samples, the
+ability to mix math and text in a paragraph is also important.  This
+expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.  As
+you see, MathJax equations can be used this way as well, without unduly
+disturbing the spacing between lines.</p>
+
+
+</div>
