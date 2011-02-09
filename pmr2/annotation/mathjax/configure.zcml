@@ -7,7 +7,12 @@
 
   <browser:resourceDirectory
       name="pmr2.annotation.mathjax.js"
-      directory="js"
+      directory="mathjax"
+      />
+
+  <browser:resourceDirectory
+      name="pmr2.annotation.mathjax.xslt"
+      directory="xslt"
       />
 
   <!-- Note storage -->
@@ -30,6 +35,7 @@
   <!-- Browser pages -->
 
   <adapter factory=".layout.mathjax_layout_factory" />
+  <adapter factory=".layout.deferred_mathjax_layout_factory" />
 
   <browser:page
       for="pmr2.app.exposure.interfaces.IExposureFile"

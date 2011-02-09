@@ -1,6 +1,8 @@
+MANIFEST.in
 README.txt
 setup.cfg
 setup.py
+docs/HISTORY.txt
 pmr2/__init__.py
 pmr2.annotation.mathjax.egg-info/PKG-INFO
 pmr2.annotation.mathjax.egg-info/SOURCES.txt

@@ -1,4 +1,55 @@
 <div tal:condition="exists:view/title" tal:replace="structure view/title"/>
 <div id="mathjax-view">
-<!-- TODO: math content goes here -->
+  <span id="math_source_uri" tal:attributes="title view/source_uri;"></span>
+  <span id="math_c2p" tal:attributes="title string:${view/portal_url}/++resource++pmr2.annotation.mathjax.xslt/mathmlc2p.xsl"></span>
+  <div id="mathjax-render">
+  </div>
+
+  <script type="text/javascript">
+  //<![CDATA[
+    var xslt_uri = jq('#math_c2p').attr('title');
+    var source_uri = jq('#math_source_uri').attr('title');
+    var mathmlc2p = null;
+    var source_doc = null;
+    var math_apply = null;
+
+    jq(document).ready(function() {
+      jq.ajax({
+        url: xslt_uri,
+        dataType: 'xml',
+        success: function(xml) {
+          mathmlc2p = xml;
+          process();
+        }
+      });
+
+      jq.ajax({
+        url: source_uri, 
+        dataType: 'xml',
+        success: function(xml) {
+          source_doc = xml
+          process();
+        }
+      });
+    });
+
+    function process() {
+      if (mathmlc2p == null || source_doc == null) return null;
+
+      var render = jq('#mathjax-render');
+      math_apply = jq(source_doc).find('math>apply');
+      for (var i = 0; i < math_apply.length; i++) {
+        var math = jq('<' + 'math>' + '<' + '/math>');
+        var d = jq('<' + 'div>' + '<' + '/div>').append(
+          math.xslt(math_apply[i], mathmlc2p));
+        render.append(d)
+      }
+
+      (function(){ 
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, "mathjax-render"]); 
+      })(); 
+    }
+
+  //]]>
+  </script>
 </div>

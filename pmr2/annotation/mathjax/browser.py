@@ -18,6 +18,13 @@ class MathJaxNote(ExposureFileViewBase):
     template = ViewPageTemplateFile('mathjax_text.pt')
     title = ViewPageTemplateFile('mathjax_title.pt')
 
+    def source_uri(self):
+        values = zope.component.getAdapter(
+            self.context, IExposureSourceAdapter).source()
+        exposure, workspace, path = values
+        return '%s/@@rawfile/%s/%s' % (
+            workspace.absolute_url(), exposure.commit_id, path)
+
     def content(self):
         a = zope.component.queryAdapter(self.context, IExposureSourceAdapter)
         if a:

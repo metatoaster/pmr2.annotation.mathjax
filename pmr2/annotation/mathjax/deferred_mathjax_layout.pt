@@ -19,14 +19,26 @@
   </script>
 
   <script id="mathjax_src" type="text/javascript"
-      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.mathjax.js/MathJax.js">
-  //<![CDATA[
-    MathJax.Hub.Config({
-      extensions: ["tex2jax.js", "mml2jax.js"],
-      jax: ["input/TeX", "output/HTML-CSS", "input/MathML", "output/HTML-CSS"],
-      tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
-    });
-  //]]>
+      tal:content="string:var mathjax_src = '${portal_url}/++resource++pmr2.annotation.mathjax.js/MathJax.js';">
+  </script>
+  
+  <script type="text/javascript">
+      loadMathJax = (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = mathjax_src;
+
+        var config = 'MathJax.Hub.Config({' +
+                       'extensions: ["mml2jax.js"],' +
+                       'jax: ["input/MathML", "output/HTML-CSS"]' +
+                     '});' +
+                     'MathJax.Hub.Startup.onload();';
+
+        if (window.opera) {script.innerHTML = config}
+                     else {script.text = config}
+
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })
   </script>
 
 </metal:slot>
