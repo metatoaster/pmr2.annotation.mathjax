@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.0 - Unreleased
-----------------
+1.1cdn - Released (2011-08-22)
+------------------------------
 
-* Initial release
+* A release that use thei MathJax CDN instead of a built in one.
 
