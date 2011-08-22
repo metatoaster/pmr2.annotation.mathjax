@@ -6,11 +6,6 @@
   <!-- Resources -->
 
   <browser:resourceDirectory
-      name="pmr2.annotation.mathjax.js"
-      directory="mathjax"
-      />
-
-  <browser:resourceDirectory
       name="pmr2.annotation.mathjax.xslt"
       directory="xslt"
       />
