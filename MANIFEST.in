@@ -2,4 +2,4 @@ recursive-include pmr2 *
 recursive-include docs *
 global-exclude *pyc
 global-exclude .*swp
-prune pmr2/annotation/mathjax/mathjax/.git
+prune pmr2/annotation/mathjax/mathjax/

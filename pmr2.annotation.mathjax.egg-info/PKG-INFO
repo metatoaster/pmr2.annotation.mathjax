@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: pmr2.annotation.mathjax
-Version: 0.0dev
+Version: 0.0cdndev
 Summary: MathML annotation within PMR2 via MathJax.
 Home-page: UNKNOWN
 Author: Tommy Yu
