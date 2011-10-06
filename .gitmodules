@@ -1,0 +1,3 @@
+[submodule "pmr2/annotation/mathjax/mathjax"]
+    path = pmr2/annotation/mathjax/mathjax
+    url = https://github.com/mathjax/MathJax.git
