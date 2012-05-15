@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1.1cdn - Released (2012-05-15)
+---------------------------------
+
+* Remove reference to no longer existent mathjax directory.
+
+
 1.1cdn - Released (2011-08-22)
 ------------------------------
 
