@@ -32,7 +32,7 @@
   <browser:page
       for="pmr2.app.exposure.interfaces.IExposureFile"
       name="mathjax"
-      class=".browser.MathJaxNoteView"
+      class=".browser.MathJaxNote"
       permission="zope2.View"
       />
 

@@ -1,0 +1,31 @@
+<metal:page 
+      metal:use-macro="context/@@pmr2-macros/pmr2_main"
+  >
+<metal:slot metal:fill-slot="javascript_head_slot" 
+    i18n:domain="pmr2.annotation.mathjax">
+
+  <script type="text/javascript"
+      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.mathjax.xslt/jquery.xslt.yui.full.js">
+  </script>
+
+  <script id="mathjax_src" type="text/javascript"
+      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.mathjax.js/MathJax.js">
+  //<![CDATA[
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js", "mml2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS", "input/MathML", "output/HTML-CSS"],
+      tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+    });
+  //]]>
+  </script>
+</metal:slot>
+<body>
+
+<metal:slot metal:fill-slot="main" i18n:domain="cmf_default">
+  <div id="layout-contents">
+    <span tal:replace="structure view/template" />
+  </div>
+</metal:slot>
+</body>
+
+</metal:page>

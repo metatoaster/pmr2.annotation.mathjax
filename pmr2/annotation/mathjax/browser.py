@@ -11,6 +11,7 @@ class MathJaxNote(ExposureFileViewBase):
     The MathJax viewer class.
     """
 
+    index = ViewPageTemplateFile('mathjax_index.pt')
     template = ViewPageTemplateFile('mathjax_text.pt')
     title = ViewPageTemplateFile('mathjax_title.pt')
 
@@ -26,5 +27,7 @@ class MathJaxNote(ExposureFileViewBase):
         if a:
             return a.file()
 
-MathJaxNoteView = layout.wrap_form(MathJaxNote, 
-    __wrapper_class=MathJaxLayoutWrapper)
+
+class DeferredMathJaxNote(MathJaxNote):
+
+    index = ViewPageTemplateFile('deferred_mathjax_index.pt')
