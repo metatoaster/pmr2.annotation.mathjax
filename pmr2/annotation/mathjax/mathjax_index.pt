@@ -1,5 +1,5 @@
 <metal:page 
-      metal:use-macro="context/@@pmr2-macros/pmr2_main"
+      metal:use-macro="context/@@pmr2-z3cform-macros/main"
   >
 <metal:slot metal:fill-slot="javascript_head_slot" 
     i18n:domain="pmr2.annotation.mathjax">
