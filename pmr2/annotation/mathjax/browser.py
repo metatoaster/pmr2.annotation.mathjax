@@ -1,5 +1,5 @@
 import zope.component
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 from zope.publisher.browser import BrowserPage
 
 from pmr2.app.exposure.interfaces import IExposureSourceAdapter
