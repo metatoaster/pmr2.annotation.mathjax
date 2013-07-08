@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.1.3cdn - Released (2013-07-08)
+---------------------------------
+
+* pmr2.app-0.7 compatibility release.
+
+  - Referencing the current set of pmr2 macros
+  - Removed deprecated zope.app imports.
+
 1.1.2cdn - Released (2012-08-02)
 ---------------------------------
 
