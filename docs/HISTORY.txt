@@ -1,8 +1,27 @@
 Changelog
 =========
 
-0.0 - Unreleased
-----------------
+1.1.3cdn - Released (2013-07-08)
+---------------------------------
 
-* Initial release
+* pmr2.app-0.7 compatibility release.
+
+  - Referencing the current set of pmr2 macros
+  - Removed deprecated zope.app imports.
+
+1.1.2cdn - Released (2012-08-02)
+---------------------------------
+
+* pmr2.app-0.6 compatibility release.
+
+1.1.1cdn - Released (2012-05-15)
+---------------------------------
+
+* Remove reference to no longer existent mathjax directory.
+
+
+1.1cdn - Released (2011-08-22)
+------------------------------
+
+* A release that use thei MathJax CDN instead of a built in one.
 
