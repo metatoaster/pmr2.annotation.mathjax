@@ -7,14 +7,14 @@
 
   <script type="text/javascript">
   //<![CDATA[
-    var xslt_uri = jq('#math_c2p').attr('title');
-    var source_uri = jq('#math_source_uri').attr('title');
+    var xslt_uri = $('#math_c2p').attr('title');
+    var source_uri = $('#math_source_uri').attr('title');
     var mathmlc2p = null;
     var source_doc = null;
     var math_apply = null;
 
-    jq(document).ready(function() {
-      jq.ajax({
+    $(document).ready(function() {
+      $.ajax({
         url: xslt_uri,
         dataType: 'xml',
         success: function(xml) {
@@ -23,7 +23,7 @@
         }
       });
 
-      jq.ajax({
+      $.ajax({
         url: source_uri, 
         dataType: 'xml',
         success: function(xml) {
@@ -36,11 +36,11 @@
     function process() {
       if (mathmlc2p == null || source_doc == null) return null;
 
-      var render = jq('#mathjax-render');
-      math_apply = jq(source_doc).find('math>apply');
+      var render = $('#mathjax-render');
+      math_apply = $(source_doc).find('math>apply');
       for (var i = 0; i < math_apply.length; i++) {
-        var math = jq('<' + 'math>' + '<' + '/math>');
-        var d = jq('<' + 'div>' + '<' + '/div>').append(
+        var math = $('<' + 'math>' + '<' + '/math>');
+        var d = $('<' + 'div>' + '<' + '/div>').append(
           math.xslt(math_apply[i], mathmlc2p));
         render.append(d)
       }
