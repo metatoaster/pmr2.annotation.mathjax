@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1.4cdn - Released (2014-04-03)
+---------------------------------
+
+- Renamed reference of `jq` to `$` since Plone standardized on that, and
+  `jq` is deprecated.
+
 1.1.3cdn - Released (2013-07-08)
 ---------------------------------
 
