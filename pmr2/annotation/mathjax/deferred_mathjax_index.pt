@@ -10,7 +10,7 @@
   </script>
 
   <script id="mathjax_src" type="text/javascript"
-      tal:content="string:var mathjax_src = 'http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js';">
+      tal:content="string:var mathjax_src = '//cdn.mathjax.org/mathjax/1.1-latest/MathJax.js';">
   </script>
   
   <script type="text/javascript">

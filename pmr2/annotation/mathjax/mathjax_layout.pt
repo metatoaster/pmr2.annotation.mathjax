@@ -19,7 +19,7 @@
   </script>
 
   <script id="mathjax_src" type="text/javascript"
-      tal:attributes="src string:http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js">
+      tal:attributes="src string://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js">
   //<![CDATA[
     MathJax.Hub.Config({
       extensions: ["tex2jax.js", "mml2jax.js"],
