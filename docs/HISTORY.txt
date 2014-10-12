@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.5cdn - Unreleased
----------------------
+1.1.5cdn - Released (2014-10-12)
+--------------------------------
 
 - Use relative urlscheme to allow both http/https.
 
